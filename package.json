@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run export",
+    "export": "next export -o out || echo 'Export not needed for static export'",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build && firebase deploy"
   },
   "dependencies": {
     "react": "^19.0.0",
