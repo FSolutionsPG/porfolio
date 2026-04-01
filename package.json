@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run export",
-    "export": "next export -o out || echo 'Export not needed for static export'",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "deploy": "npm run build && firebase deploy"
